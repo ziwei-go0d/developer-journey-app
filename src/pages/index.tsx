@@ -24,22 +24,35 @@ import Head from "next/head";
 import SignInRecommendation from "src/components/sign-in-recommendation";
 
 export default function Home() {
-  const { status } = useSession();
-  return (
-    <>
-      <Head>
-        <title>Home | Developer Journey App</title>
-      </Head>
-      <main>
-        {status === "authenticated" ? (
-          <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
-            <PromptPanel />
-            <TileBoard />
-            <GameControls />
-            <Inventory />
-          </div>
-        ) : (<SignInRecommendation />)}
-      </main>
-    </>
-  )
+//   const { status } = useSession();
+//   return (
+//     <>
+//       <Head>
+//         <title>Home | Developer Journey App</title>
+//       </Head>
+//       <main>
+//         {status === "authenticated" ? (
+//           <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
+//             <PromptPanel />
+//             <TileBoard />
+//             <GameControls />
+//             <Inventory />
+//           </div>
+//         ) : (<SignInRecommendation />)}
+//       </main>
+//     </>
+//   )
+    return {
+        <>
+          <Head>
+            <title>Home | Developer Journey App</title>
+          </Head>
+          <main>
+            <div>
+                <h1>What GO0D do I do today?</h1>
+                <input type="button">Go GO0D</input>
+            </div>
+          </main>
+        </>
+    }
 }
